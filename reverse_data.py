@@ -29,6 +29,11 @@ NOAD = '/System/Library/AssetsV2/' \
        'AssetData/' \
        'New Oxford American Dictionary.dictionary/' \
        'Contents/Resources/Body.data'
+french =  '/System/Library/AssetsV2/'\
+          'com_apple_MobileAsset_DictionaryServices_dictionaryOSX/'\
+          'c214f3e2ba8f0b26ce1d381fa76a92e09e927b7a.asset/'\
+          'AssetData/French - English.dictionary/'\
+          'Contents/Resources/Body.data'
 
 
 # Matches spans that give some meta info, like "literary", "informal", etc.
@@ -63,8 +68,8 @@ CUSTOM_CSS = """
 
 def main():
   p = argparse.ArgumentParser()
-  p.add_argument('--dictionary_path', default=NOAD,
-                 help=f"path to a body.data file. defaults to {NOAD}")
+  p.add_argument('--dictionary_path', default=french,
+                 help=f"path to a body.data file. defaults to {french}")
   p.add_argument('--lookup', nargs='+',
                  default=['vital', 'house', 'cozen'],
                  help='words to lookup')
